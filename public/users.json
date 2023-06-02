@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1a24fddb-fe54-4fac-a23f-9f880cc06590",
+    "rol": "ADMIN_ROL",
+    "name": "John Gonzalez",
+    "email": "test@gmail.com",
+    "password": "$2b$10$KcP2BOytUgGRZz9mRDqWMeiv8Nnykxzhvb8T0oUsFU4FODIj7kYbG",
+    "active": true,
+    "created_at": "2023-05-29T22:44:09.168Z",
+    "updated_at": "2023-06-02T03:37:04.144Z"
+  }
+]

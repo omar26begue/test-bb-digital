@@ -1,0 +1,1896 @@
+{
+	"info": {
+		"_postman_id": "52d0a6e8-ed20-4366-9ff0-09f1de3f7c6a",
+		"name": "Test-Omar Isalgue",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14556505",
+		"_collection_link": "https://cloudy-shuttle-281665.postman.co/workspace/RECSA~e24392af-8c26-4295-b019-7063f916d6ef/collection/14556505-52d0a6e8-ed20-4366-9ff0-09f1de3f7c6a?action=share&creator=14556505&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "001 - login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@gmail.com\",\r\n  \"password\": \"123456\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8085/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"test@gmail.com\",\r\n  \"password\": \"123456\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8085/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "381"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17d-KgedL3+7mmpLFAGt5jSLAvA+7Ws\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 03:26:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": \"1a24fddb-fe54-4fac-a23f-9f880cc06590\",\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc2Mzc2LCJleHAiOjE2ODU2NzgxNzZ9.zHC2Qfxi70-WRXMgVZn7U5E2pPzTswSn_YaDCR1n_PQ\"\n    },\n    \"message\": \"Autentificacion de usuario\"\n}"
+				},
+				{
+					"name": "failed",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"test@gmail.com\",\r\n  \"password\": \"1234569\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8085/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "74"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4a-zkKJp3elUAsChS7kPSfBz9xbhyM\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 03:27:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": \"Contrasena incorrecta\",\n    \"error\": \"Bad Request\"\n}"
+				}
+			]
+		},
+		{
+			"name": "002 - create user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"test@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"rol\": \"USER_ROL\",\r\n  \"name\": \"John Gonzalez\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8085/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"test3@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"rol\": \"USER_ROL\",\r\n  \"name\": \"John Gonzalez\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8085/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "130"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"82-IJyyCBIc17A7HoDNoOe+ieVIkX0\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 03:33:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": \"4ebb6e14-8ea3-4ccd-aacf-57c39c9dab01\",\n        \"email\": \"test3@gmail.com\",\n        \"name\": \"John Gonzalez\"\n    },\n    \"message\": \"Usuario creado\"\n}"
+				},
+				{
+					"name": "failed",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"test3@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"rol\": \"USER_ROL\",\r\n  \"name\": \"John Gonzalez\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8085/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"users"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "82"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"52-NditgJ1MV9+daZuMhCZHssKCRl4\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 03:34:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": \"El usuario ya esta registrado\",\n    \"error\": \"Bad Request\"\n}"
+				}
+			]
+		},
+		{
+			"name": "003 - active user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/users/test3%40gmail.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"users",
+						"test3%40gmail.com"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/users/test3%40gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"users",
+								"test3%40gmail.com"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "132"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"84-0R8/a89nJaCsE2rJp5J0RJ35MrI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 03:36:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": \"4ebb6e14-8ea3-4ccd-aacf-57c39c9dab01\",\n        \"email\": \"test3@gmail.com\",\n        \"name\": \"John Gonzalez\"\n    },\n    \"message\": \"Usuario activado\"\n}"
+				}
+			]
+		},
+		{
+			"name": "004 - list product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc1NTc0LCJleHAiOjE2ODU2NzczNzR9.JyfM25YD1Wixt2UrpdZr4MYim5aSBj5Vsq5GDA6Jx_Y"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc1NTc0LCJleHAiOjE2ODU2NzczNzR9.JyfM25YD1Wixt2UrpdZr4MYim5aSBj5Vsq5GDA6Jx_Y"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "543"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"21f-8WDoI2CgTbPX56SMkqH+gUX4f0g\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 03:38:02 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"name\": \"Producto de ejemplo\",\n            \"amount\": 12345.12,\n            \"count\": 109,\n            \"category\": \"Prueba\",\n            \"tags\": \"Ventas\",\n            \"description\": \"Ejemplo de descripción producto\",\n            \"information\": \"Información del producto\",\n            \"assessment\": 4,\n            \"sku\": \"002\",\n            \"imagen\": \"http://www.example.com/\"\n        },\n        {\n            \"name\": \"Producto de ejemplo\",\n            \"amount\": 12345.12,\n            \"count\": 123,\n            \"category\": \"Prueba\",\n            \"tags\": \"Ventas\",\n            \"description\": \"Ejemplo de descripción producto\",\n            \"information\": \"Información del producto\",\n            \"assessment\": 5,\n            \"sku\": \"001\",\n            \"imagen\": \"http://www.example.com/\"\n        }\n    ],\n    \"message\": \"Listado de productos\"\n}"
+				},
+				{
+					"name": "failed",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc1NTc0LCJleHAiOjE2ODU2NzczNzR9.JyfM25YD1Wixt2UrpdZr4MYim5aSBj5Vsq5GDA6Jx_Y1"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-hGShxOkieaAVDloBubJVM+h58D8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 03:39:31 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 401,\n    \"message\": \"Unauthorized\"\n}"
+				}
+			]
+		},
+		{
+			"name": "005 - list pagination",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc1NTc0LCJleHAiOjE2ODU2NzczNzR9.JyfM25YD1Wixt2UrpdZr4MYim5aSBj5Vsq5GDA6Jx_Y"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/products/pagination?page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"products",
+						"pagination"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc1NTc0LCJleHAiOjE2ODU2NzczNzR9.JyfM25YD1Wixt2UrpdZr4MYim5aSBj5Vsq5GDA6Jx_Y"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/products/pagination?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"products",
+								"pagination"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "846"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"34e-qhgPgAZowoP/mtIrltP/jyChaQI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 03:42:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"page\": \"1\",\n        \"totalElements\": 3,\n        \"limit\": 10,\n        \"elements\": [\n            {\n                \"name\": \"Producto de ejemplo\",\n                \"amount\": 12345.12,\n                \"count\": 109,\n                \"category\": \"Prueba\",\n                \"tags\": \"Ventas\",\n                \"description\": \"Ejemplo de descripción producto\",\n                \"information\": \"Información del producto\",\n                \"assessment\": 4,\n                \"sku\": \"002\",\n                \"imagen\": \"http://www.example.com/\"\n            },\n            {\n                \"name\": \"Producto de ejemplo\",\n                \"amount\": 12345.12,\n                \"count\": 123,\n                \"category\": \"Prueba\",\n                \"tags\": \"Ventas\",\n                \"description\": \"Ejemplo de descripción producto\",\n                \"information\": \"Información del producto\",\n                \"assessment\": 5,\n                \"imagen\": \"http://www.example.com/\",\n                \"sku\": \"001\"\n            },\n            {\n                \"name\": \"Producto de ejemplo\",\n                \"amount\": 12345.12,\n                \"count\": 123,\n                \"category\": \"Prueba\",\n                \"tags\": \"Ventas\",\n                \"description\": \"Ejemplo de descripción producto\",\n                \"information\": \"Información del producto\",\n                \"assessment\": 4,\n                \"sku\": \"007\",\n                \"imagen\": \"http://www.example.com/\"\n            }\n        ]\n    },\n    \"message\": \"Listado de productos\"\n}"
+				}
+			]
+		},
+		{
+			"name": "006 - count product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc3NjE2LCJleHAiOjE2ODU2Nzk0MTZ9.o6nKJMUTOHenRPohf2ASl84x1n-Ch1Le_F4cgekz_Rg"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/products/count?page=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"products",
+						"count"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "name",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "amount",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "count",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "category",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "tags",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "description",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "information",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "assessment",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "sku",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "imagen",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc3NjE2LCJleHAiOjE2ODU2Nzk0MTZ9.o6nKJMUTOHenRPohf2ASl84x1n-Ch1Le_F4cgekz_Rg"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/products/count?page=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"products",
+								"count"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "name",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "amount",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "count",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "tags",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "information",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "assessment",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "sku",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "imagen",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "44"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2c-ziApyAGHaGUKjE7POKak/ZBQpTk\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 03:51:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": 3,\n    \"message\": \"Cantidad de productos\"\n}"
+				},
+				{
+					"name": "failed",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc1NTc0LCJleHAiOjE2ODU2NzczNzR9.JyfM25YD1Wixt2UrpdZr4MYim5aSBj5Vsq5GDA6Jx_Y"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/products/count?page=1&name=test&amount=123&count=123&category=test&tags=test&description=test&information=test&assessment=2&sku=002&imagen=test",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"products",
+								"count"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "name",
+									"value": "test"
+								},
+								{
+									"key": "amount",
+									"value": "123"
+								},
+								{
+									"key": "count",
+									"value": "123"
+								},
+								{
+									"key": "category",
+									"value": "test"
+								},
+								{
+									"key": "tags",
+									"value": "test"
+								},
+								{
+									"key": "description",
+									"value": "test"
+								},
+								{
+									"key": "information",
+									"value": "test"
+								},
+								{
+									"key": "assessment",
+									"value": "2"
+								},
+								{
+									"key": "sku",
+									"value": "002"
+								},
+								{
+									"key": "imagen",
+									"value": "test"
+								}
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-hGShxOkieaAVDloBubJVM+h58D8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 03:50:01 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 401,\n    \"message\": \"Unauthorized\"\n}"
+				}
+			]
+		},
+		{
+			"name": "007 - create product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc1NTc0LCJleHAiOjE2ODU2NzczNzR9.JyfM25YD1Wixt2UrpdZr4MYim5aSBj5Vsq5GDA6Jx_Y"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Producto de ejemplo\",\r\n  \"amount\": 12345.12,\r\n  \"count\": 123,\r\n  \"category\": \"Prueba\",\r\n  \"tags\": \"Ventas\",\r\n  \"description\": \"Ejemplo de descripción producto\",\r\n  \"information\": \"Información del producto\",\r\n  \"assessment\": 4,\r\n  \"sku\": \"007\",\r\n  \"imagen\": \"http://www.example.com/\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8085/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "failed",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc1NTc0LCJleHAiOjE2ODU2NzczNzR9.JyfM25YD1Wixt2UrpdZr4MYim5aSBj5Vsq5GDA6Jx_Y"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Producto de ejemplo\",\r\n  \"amount\": 12345.12,\r\n  \"count\": 123,\r\n  \"category\": \"Prueba\",\r\n  \"tags\": \"Ventas\",\r\n  \"description\": \"Ejemplo de descripción producto\",\r\n  \"information\": \"Información del producto\",\r\n  \"assessment\": 4,\r\n  \"sku\": \"001\",\r\n  \"imagen\": \"http://www.example.com/\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8085/products",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"products"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "81"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"51-UliOEhdUaDfrUgR5LGLDtNxQ22w\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 03:41:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 400,\n    \"message\": \"Producto ya está registrado\",\n    \"error\": \"Bad Request\"\n}"
+				}
+			]
+		},
+		{
+			"name": "008 - update product",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc3NjE2LCJleHAiOjE2ODU2Nzk0MTZ9.o6nKJMUTOHenRPohf2ASl84x1n-Ch1Le_F4cgekz_Rg"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Producto de ejemplo\",\r\n  \"amount\": 12345.12,\r\n  \"count\": 123,\r\n  \"category\": \"Prueba\",\r\n  \"tags\": \"Ventas\",\r\n  \"description\": \"Ejemplo de descripción producto\",\r\n  \"information\": \"Información del producto\",\r\n  \"assessment\": 5,\r\n  \"imagen\": \"http://www.example.com/\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8085/products/001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"products",
+						"001"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ok",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc3NjE2LCJleHAiOjE2ODU2Nzk0MTZ9.o6nKJMUTOHenRPohf2ASl84x1n-Ch1Le_F4cgekz_Rg"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Producto de ejemplo\",\r\n  \"amount\": 12345.12,\r\n  \"count\": 123,\r\n  \"category\": \"Prueba\",\r\n  \"tags\": \"Ventas\",\r\n  \"description\": \"Ejemplo de descripción producto\",\r\n  \"information\": \"Información del producto\",\r\n  \"assessment\": 5,\r\n  \"imagen\": \"http://www.example.com/\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8085/products/001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"products",
+								"001"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "297"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"129-t91Rzvlqtf/nbDNhfuY8G93Xlik\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 03:53:26 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"name\": \"Producto de ejemplo\",\n        \"amount\": 12345.12,\n        \"count\": 123,\n        \"category\": \"Prueba\",\n        \"tags\": \"Ventas\",\n        \"description\": \"Ejemplo de descripción producto\",\n        \"information\": \"Información del producto\",\n        \"assessment\": 5,\n        \"sku\": \"001\",\n        \"imagen\": \"http://www.example.com/\"\n    },\n    \"message\": \"Actualización de producto\"\n}"
+				},
+				{
+					"name": "failed",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc1NTc0LCJleHAiOjE2ODU2NzczNzR9.JyfM25YD1Wixt2UrpdZr4MYim5aSBj5Vsq5GDA6Jx_Y"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Producto de ejemplo\",\r\n  \"amount\": 12345.12,\r\n  \"count\": 123,\r\n  \"category\": \"Prueba\",\r\n  \"tags\": \"Ventas\",\r\n  \"description\": \"Ejemplo de descripción producto\",\r\n  \"information\": \"Información del producto\",\r\n  \"assessment\": 5,\r\n  \"imagen\": \"http://www.example.com/\"\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8085/products/001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"products",
+								"001"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-hGShxOkieaAVDloBubJVM+h58D8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 03:52:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 401,\n    \"message\": \"Unauthorized\"\n}"
+				}
+			]
+		},
+		{
+			"name": "009 - delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc3NjE2LCJleHAiOjE2ODU2Nzk0MTZ9.o6nKJMUTOHenRPohf2ASl84x1n-Ch1Le_F4cgekz_Rg"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/products/001",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"products",
+						"001"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ok",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc3NjE2LCJleHAiOjE2ODU2Nzk0MTZ9.o6nKJMUTOHenRPohf2ASl84x1n-Ch1Le_F4cgekz_Rg"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/products/001",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"products",
+								"001"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 03:54:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "010 - list sales",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc3NjE2LCJleHAiOjE2ODU2Nzk0MTZ9.o6nKJMUTOHenRPohf2ASl84x1n-Ch1Le_F4cgekz_Rg"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"products\": [\r\n    \"001\",\r\n    \"002\"\r\n  ]\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8085/sales/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"sales",
+						"product"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ok",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc3NjE2LCJleHAiOjE2ODU2Nzk0MTZ9.o6nKJMUTOHenRPohf2ASl84x1n-Ch1Le_F4cgekz_Rg"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"products\": [\r\n    \"002\"\r\n  ]\r\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8085/sales/product",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"sales",
+								"product"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "292"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"124-uQjj4/ouYv71b/Cn7SynwiqzE+A\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 03:57:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"name\": \"Producto de ejemplo\",\n            \"amount\": 12345.12,\n            \"count\": 108,\n            \"category\": \"Prueba\",\n            \"tags\": \"Ventas\",\n            \"description\": \"Ejemplo de descripción producto\",\n            \"information\": \"Información del producto\",\n            \"assessment\": 4,\n            \"sku\": \"002\",\n            \"imagen\": \"http://www.example.com/\"\n        }\n    ],\n    \"message\": \"Ventas de productos\"\n}"
+				}
+			]
+		},
+		{
+			"name": "011 - product sales",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc3NjE2LCJleHAiOjE2ODU2Nzk0MTZ9.o6nKJMUTOHenRPohf2ASl84x1n-Ch1Le_F4cgekz_Rg"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/sales/list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"sales",
+						"list"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc3NjE2LCJleHAiOjE2ODU2Nzk0MTZ9.o6nKJMUTOHenRPohf2ASl84x1n-Ch1Le_F4cgekz_Rg"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/sales/list",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"sales",
+								"list"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "552"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"228-YU2CK5ar3RtvBs7vHl2IAwdwiGI\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 03:59:11 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"name\": \"Producto de ejemplo\",\n            \"amount\": 12345.12,\n            \"count\": 108,\n            \"category\": \"Prueba\",\n            \"tags\": \"Ventas\",\n            \"description\": \"Ejemplo de descripción producto\",\n            \"information\": \"Información del producto\",\n            \"assessment\": 4,\n            \"sku\": \"002\",\n            \"imagen\": \"http://www.example.com/\"\n        },\n        {\n            \"name\": \"Producto de ejemplo\",\n            \"amount\": 12345.12,\n            \"count\": 123,\n            \"category\": \"Prueba\",\n            \"tags\": \"Ventas\",\n            \"description\": \"Ejemplo de descripción producto\",\n            \"information\": \"Información del producto\",\n            \"assessment\": 4,\n            \"sku\": \"007\",\n            \"imagen\": \"http://www.example.com/\"\n        }\n    ],\n    \"message\": \"Listado de productos vendidos\"\n}"
+				}
+			]
+		},
+		{
+			"name": "012 - list product zero",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc3NjE2LCJleHAiOjE2ODU2Nzk0MTZ9.o6nKJMUTOHenRPohf2ASl84x1n-Ch1Le_F4cgekz_Rg"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/sales/list-product-zero",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"sales",
+						"list-product-zero"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc3NjE2LCJleHAiOjE2ODU2Nzk0MTZ9.o6nKJMUTOHenRPohf2ASl84x1n-Ch1Le_F4cgekz_Rg"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/sales/list-product-zero",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"sales",
+								"list-product-zero"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "52"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"34-W9Yr4QZCQdBF8IhR9DNDTlShD+c\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 04:00:25 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": [],\n    \"message\": \"Listado de productos en cero\"\n}"
+				}
+			]
+		},
+		{
+			"name": "013 - total earnings",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc3NjE2LCJleHAiOjE2ODU2Nzk0MTZ9.o6nKJMUTOHenRPohf2ASl84x1n-Ch1Le_F4cgekz_Rg"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8085/sales/total-earnings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"sales",
+						"total-earnings"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "ok",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc3NjE2LCJleHAiOjE2ODU2Nzk0MTZ9.o6nKJMUTOHenRPohf2ASl84x1n-Ch1Le_F4cgekz_Rg"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/sales/total-earnings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"sales",
+								"total-earnings"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "48"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"30-kVjEqgtO66LCdiv+QCl+N+JxKjo\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 04:03:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": 135796.32,\n    \"message\": \"Ganancias totales\"\n}"
+				},
+				{
+					"name": "failed",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxYTI0ZmRkYi1mZTU0LTRmYWMtYTIzZi05Zjg4MGNjMDY1OTAiLCJlbWFpbCI6InRlc3RAZ21haWwuY29tIiwicm9sZXMiOlsiVSIsIlMiLCJFIiwiUiIsIl8iLCJSIiwiTyIsIkwiXSwiaWF0IjoxNjg1Njc1NTc0LCJleHAiOjE2ODU2NzczNzR9.JyfM25YD1Wixt2UrpdZr4MYim5aSBj5Vsq5GDA6Jx_Y"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8085/sales/total-earnings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8085",
+							"path": [
+								"sales",
+								"total-earnings"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "43"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2b-hGShxOkieaAVDloBubJVM+h58D8\""
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 02 Jun 2023 04:02:52 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"statusCode\": 401,\n    \"message\": \"Unauthorized\"\n}"
+				}
+			]
+		}
+	]
+}

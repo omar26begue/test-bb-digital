@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Producto de ejemplo",
+    "amount": 12345.12,
+    "count": 108,
+    "category": "Prueba",
+    "tags": "Ventas",
+    "description": "Ejemplo de descripción producto",
+    "information": "Información del producto",
+    "assessment": 4,
+    "sku": "001",
+    "imagen": "http://www.example.com/"
+  },
+  {
+    "name": "Producto de ejemplo",
+    "amount": 12345.12,
+    "count": 123,
+    "category": "Prueba",
+    "tags": "Ventas",
+    "description": "Ejemplo de descripción producto",
+    "information": "Información del producto",
+    "assessment": 4,
+    "sku": "002",
+    "imagen": "http://www.example.com/"
+  }
+]
